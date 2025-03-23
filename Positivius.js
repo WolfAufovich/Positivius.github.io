@@ -52,7 +52,6 @@ function scrollRight(){
 
 var containers;
 function initDrawers() {
-    // Получаем контейнер с контентом
     containers = document.querySelectorAll(".content");
     setHeights();
     wireUpTriggers();
@@ -63,14 +62,10 @@ window.addEventListener("load", initDrawers);
 
 function setHeights() {
     containers.forEach(container => {
-        // Получаем контент
         let content = container.querySelector(".additional_content");
         content.removeAttribute("aria-hidden");
-        // Высота контента, который нужно скрыть/показать
         let heightOfContent = content.getBoundingClientRect().height;
-        // Задаем пользовательские свойства CSS с высотой контента
         container.style.setProperty("--containerHeight", `${heightOfContent}px`);
-        // Когда высота считана и задана
         setTimeout(e => {
             container.classList.add("height-is-set");
             content.setAttribute("aria-hidden", "true");
@@ -80,9 +75,7 @@ function setHeights() {
 
 function wireUpTriggers() {
     containers.forEach(container => {
-        // Получаем все элементы-триггеры
         let btn = container.querySelector(".Process_block_content_body").querySelector(".trigger");
-        // Получаем контент
         let content = container.querySelector(".additional_content");
         btn.onclick = function(){
             btn.setAttribute("aria-expanded", btn.getAttribute("aria-expanded") === "false" ? "true" : "false");
