@@ -269,9 +269,10 @@ li a:hover{
     font-weight: bold;
 }
 .trigger{
-	user-select: none;
-	-webkit-tap-highlight-color: transparent;
-	tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	cursor: pointer;
     width: 58px ;
     height: 58px;
     border-radius: 50%;
