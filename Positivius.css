@@ -267,6 +267,7 @@ li a:hover{
     font-weight: bold;
 }
 .trigger{
+	user-select: none;
     width: 58px ;
     height: 58px;
     border-radius: 50%;
