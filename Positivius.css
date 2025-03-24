@@ -270,6 +270,8 @@ li a:hover{
 }
 .trigger{
 	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
     width: 58px ;
     height: 58px;
     border-radius: 50%;
